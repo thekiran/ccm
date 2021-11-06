@@ -14,9 +14,10 @@
         <!-- animation -->
         <!-- <link rel="stylesheet" href="css/animate.css" media="print" onload="this.media='all';" /> -->
         <!-- bootstrap -->
-        <link rel="stylesheet" href="css/bootstrap.min.css"  media="print" onload="this.media='all';"  />
+        <!-- <link rel="stylesheet" href="css/bootstrap.min.css"  media="print" onload="this.media='all';"  /> -->
         <!-- font-awesome icon -->
-        <link rel="stylesheet" href="css/font-awesome.min.css"  media="print" onload="this.media='all';"  />
+        <!-- <link rel="stylesheet" href="css/font-awesome.min.css"  media="print" onload="this.media='all';"  /> -->
+
         <!-- themify-icons -->
         <!-- <link rel="stylesheet" href="css/themify-icons.css"  media="print" onload="this.media='all';" /> -->
         <!-- owl carousel -->
@@ -27,13 +28,13 @@
         <!-- base -->
         <link rel="stylesheet" href="css/base.css"  media="print" onload="this.media='all';" /> 
         <!-- elements -->
-        <link rel="stylesheet" href="css/elements.css"  media="print" onload="this.media='all';" />
+        <!-- <link rel="stylesheet" href="css/elements.css"  media="print" onload="this.media='all';" /> -->
         <!-- responsive -->
-        <link rel="stylesheet" href="css/responsive.css"  media="print" onload="this.media='all';" />
+        <!-- <link rel="stylesheet" href="css/responsive.css"  media="print" onload="this.media='all';" /> -->
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" media="print" onload="this.media='all';">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" media="print" onload="this.media='all';">
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" media="print" onload="this.media='all';"> -->
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" media="print" onload="this.media='all';"> -->
 
         <style>
             .bg-dark, #hero-section10{
@@ -66,14 +67,6 @@
 
     gtag('config', 'UA-209829546-1');
 
-    window.onload = function(){
-        const script = document.createElement('script');
-    
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-209829546-1';
-
-        document.head.appendChild(script);
-    }
-  
   </script>
     </head>
     <body>
@@ -768,35 +761,36 @@
 
 
         <!-- javascript libraries -->
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/jquery.appear.js"></script>
+        <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+        <!-- <script type="text/javascript" src="js/jquery.appear.js"></script>
         <script type="text/javascript" src="js/smooth-scroll.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+
         <!-- wow animation -->
-        <script type="text/javascript" src="js/wow.min.js"></script>
+        <!-- <script type="text/javascript" src="js/wow.min.js"></script> -->
         <!-- owl carousel -->
-        <script type="text/javascript" src="js/owl.carousel.min.js"></script>        
+        <!-- <script type="text/javascript" src="js/owl.carousel.min.js"></script>         -->
         <!-- images loaded -->
-        <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+        <!-- <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script> -->
         <!-- isotope -->
-        <script type="text/javascript" src="js/jquery.isotope.min.js"></script> 
+        <!-- <script type="text/javascript" src="js/jquery.isotope.min.js"></script>  -->
         <!-- magnific popup -->
-        <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+        <!-- <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script> -->
         <!-- navigation -->
-        <script type="text/javascript" src="js/jquery.nav.js"></script>
+        <!-- <script type="text/javascript" src="js/jquery.nav.js"></script> -->
         <!-- equalize -->
-        <script type="text/javascript" src="js/equalize.min.js"></script>
+        <!-- <script type="text/javascript" src="js/equalize.min.js"></script> -->
         <!-- fit videos -->
-        <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+        <!-- <script type="text/javascript" src="js/jquery.fitvids.js"></script> -->
         <!-- number counter -->
-        <script type="text/javascript" src="js/jquery.countTo.js"></script>
+        <!-- <script type="text/javascript" src="js/jquery.countTo.js"></script> -->
         <!-- time counter  -->
-        <script type="text/javascript" src="js/counter.js"></script>
+        <!-- <script type="text/javascript" src="js/counter.js"></script> -->
         <!-- twitter Fetcher  -->
-        <script type="text/javascript" src="js/twitterFetcher_min.js"></script>
+        <!-- <script type="text/javascript" src="js/twitterFetcher_min.js"></script> -->
         <!-- main -->
-        <script type="text/javascript" src="js/main.js"></script>
-    
+        <!-- <script type="text/javascript" src="js/main.js"></script> -->
+        <script src="js/lab.js"></script>
 
         <!-- <script>
             
@@ -893,6 +887,34 @@
                 lazyloadIframes.forEach(function(iframe) {
                     iframeObserver.observe(iframe);
             });
+
+            $LAB.script("js/non-critic-css.js")
+            document.addEventListener('DOMContentLoaded',()=>{
+            })
+            window.onload = function() {
+
+                $LAB
+                // .script("js/non-critic-css.js").wait()
+                .script("js/jquery.min.js").wait()
+                .script("js/jquery.appear.js").wait()
+                .script("js/smooth-scroll.js").wait()
+                .script("js/bootstrap.min.js").wait()
+                .script("js/wow.min.js").wait()
+                .script("js/owl.carousel.min.js").wait()        
+                .script("js/imagesloaded.pkgd.min.js").wait()
+                .script("js/jquery.isotope.min.js").wait() 
+                .script("js/jquery.magnific-popup.min.js").wait()
+                .script("js/jquery.nav.js").wait()
+                .script("js/equalize.min.js").wait()
+                .script("js/jquery.fitvids.js").wait()
+                .script("js/jquery.countTo.js").wait()
+                .script("js/counter.js").wait()
+                .script("js/twitterFetcher_min.js").wait()
+                .script("js/main.js").wait()
+                .script('https://www.googletagmanager.com/gtag/js?id=UA-209829546-1')
+
+            }
+    
         </script>
     </body>
 </html>
