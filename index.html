@@ -12,24 +12,28 @@
         <!-- favicon -->
         <link rel="shortcut icon" href="images/icon/Cleaning-Company-Manchester-Favicon.jpg">
         <!-- animation -->
-        <link rel="stylesheet" href="css/animate.css" />
+        <!-- <link rel="stylesheet" href="css/animate.css" media="print" onload="this.media='all';" /> -->
         <!-- bootstrap -->
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css"  media="print" onload="this.media='all';"  />
         <!-- font-awesome icon -->
-        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css"  media="print" onload="this.media='all';"  />
         <!-- themify-icons -->
-        <link rel="stylesheet" href="css/themify-icons.css" />
+        <!-- <link rel="stylesheet" href="css/themify-icons.css"  media="print" onload="this.media='all';" /> -->
         <!-- owl carousel -->
-        <link rel="stylesheet" href="css/owl.transitions.css" />
-        <link rel="stylesheet" href="css/owl.carousel.css" /> 
+        <!-- <link rel="stylesheet" href="css/owl.transitions.css"  media="print" onload="this.media='all';" /> -->
+        <!-- <link rel="stylesheet" href="css/owl.carousel.css"  media="print" onload="this.media='all';" />  -->
         <!-- magnific popup -->
-        <link rel="stylesheet" href="css/magnific-popup.css" /> 
+        <!-- <link rel="stylesheet" href="css/magnific-popup.css"  media="print" onload="this.media='all';"  />  -->
         <!-- base -->
-        <link rel="stylesheet" href="css/base.css" /> 
+        <link rel="stylesheet" href="css/base.css"  media="print" onload="this.media='all';" /> 
         <!-- elements -->
-        <link rel="stylesheet" href="css/elements.css" />
+        <link rel="stylesheet" href="css/elements.css"  media="print" onload="this.media='all';" />
         <!-- responsive -->
-        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="css/responsive.css"  media="print" onload="this.media='all';" />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" media="print" onload="this.media='all';">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" media="print" onload="this.media='all';">
 
         <style>
             #hero-section10{
@@ -53,15 +57,24 @@
             <script src="js/html5shiv.min.js"></script>
         <![endif]-->
         <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-209829546-1">
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-209829546-1"> -->
 </script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-209829546-1');
-</script>
+    gtag('config', 'UA-209829546-1');
+
+    window.onload = function(){
+        const script = document.createElement('script');
+    
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-209829546-1';
+
+        document.head.appendChild(script);
+    }
+  
+  </script>
     </head>
     <body>
         
@@ -360,7 +373,7 @@
                             <div class="display-table-cell-vertical-middle">                               
                                 <!-- video -->
                                 <div class="video-overlay">
-                                    <iframe width="560" height="315" data-type="video" src="//player.vimeo.com/video/574125533?title=0&amp;amp;byline=0&amp;amp;portrait=0" allowfullscreen="" data-dashlane-frameid="2803"></iframe>
+                                    <iframe width="560" height="315" data-type="video" src="//player.vimeo.com/video/574125533?title=0&amp;amp;byline=0&amp;amp;portrait=0" allowfullscreen="" data-dashlane-frameid="2803" loading="lazy" ></iframe>
                                     
                                 </div>                                
                                 <!-- end video -->
@@ -626,7 +639,7 @@
                             </div>
                             <!-- map -->
                             <div class="col-md-12 col-sm-12 col-xs-12 no-padding margin-fifteen-top">
-                                <iframe class="width-100" height="300" id="map_canvas1" style="width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.393090780949!2d-2.2415156841565342!3d53.479305880007104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1c06cb789dd%3A0x9452ea3c625ff1a9!2sSt.James'sTower!5e0!3m2!1sen!2suk!4v1626247943715!5m2!1sen!2suk" data-dashlane-frameid="433"></iframe>
+                                <iframe class="width-100" height="300" id="map_canvas1" style="width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.393090780949!2d-2.2415156841565342!3d53.479305880007104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1c06cb789dd%3A0x9452ea3c625ff1a9!2sSt.James'sTower!5e0!3m2!1sen!2suk!4v1626247943715!5m2!1sen!2suk" data-dashlane-frameid="433" loading="lazy"></iframe>
                             </div>
                             <!-- end map -->
                         </div>
@@ -735,57 +748,79 @@
         <script type="text/javascript" src="js/main.js"></script>
     
 
-        <script>
+        <!-- <script>
             
             document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;    
+                var lazyloadImages;    
 
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
+                if ("IntersectionObserver" in window) {
+                    lazyloadImages = document.querySelectorAll(".lazy");
+                    var imageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                        var image = entry.target;
+                        image.src = image.dataset.src;
+                        image.classList.remove("lazy");
+                        imageObserver.unobserve(image);
+                        }
+                    });
+                    });
+
+                    lazyloadImages.forEach(function(image) {
+                    imageObserver.observe(image);
+                    });
+                } else {  
+                    var lazyloadThrottleTimeout;
+                    lazyloadImages = document.querySelectorAll(".lazy");
+                    
+                    function lazyload () {
+                    if(lazyloadThrottleTimeout) {
+                        clearTimeout(lazyloadThrottleTimeout);
+                    }    
+
+                    lazyloadThrottleTimeout = setTimeout(function() {
+                        var scrollTop = window.pageYOffset;
+                        lazyloadImages.forEach(function(img) {
+                            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            }
+                        });
+                        if(lazyloadImages.length == 0) { 
+                        document.removeEventListener("scroll", lazyload);
+                        window.removeEventListener("resize", lazyload);
+                        window.removeEventListener("orientationChange", lazyload);
+                        }
+                    }, 20);
+                    }
+
+            document.addEventListener("scroll", lazyload);
+            window.addEventListener("resize", lazyload);
+            window.addEventListener("orientationChange", lazyload);
         }
-      });
-    });
+        })
 
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
 
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
+        </script>
+         -->
+        <script>
+            const lazyloadImages = document.querySelectorAll(".lazy");
 
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
+            var imageObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                    var image = entry.target;
+                    image.src = image.dataset.src;
+                    image.classList.remove("lazy");
+                    imageObserver.unobserve(image);
+                    }
+                });
+                });
+
+                lazyloadImages.forEach(function(image) {
+                imageObserver.observe(image);
+            });
+
         </script>
     </body>
 </html>
