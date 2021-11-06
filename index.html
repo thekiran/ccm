@@ -373,7 +373,7 @@
                             <div class="display-table-cell-vertical-middle">                               
                                 <!-- video -->
                                 <div class="video-overlay">
-                                    <iframe width="560" height="315" data-type="video" src="//player.vimeo.com/video/574125533?title=0&amp;amp;byline=0&amp;amp;portrait=0" allowfullscreen="" data-dashlane-frameid="2803" loading="lazy" ></iframe>
+                                    <iframe width="560" height="315" data-type="video" data-src="//player.vimeo.com/video/574125533?title=0&amp;amp;byline=0&amp;amp;portrait=0" allowfullscreen="" data-dashlane-frameid="2803" ></iframe>
                                     
                                 </div>                                
                                 <!-- end video -->
@@ -639,7 +639,7 @@
                             </div>
                             <!-- map -->
                             <div class="col-md-12 col-sm-12 col-xs-12 no-padding margin-fifteen-top">
-                                <iframe class="width-100" height="300" id="map_canvas1" style="width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.393090780949!2d-2.2415156841565342!3d53.479305880007104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1c06cb789dd%3A0x9452ea3c625ff1a9!2sSt.James'sTower!5e0!3m2!1sen!2suk!4v1626247943715!5m2!1sen!2suk" data-dashlane-frameid="433" loading="lazy"></iframe>
+                                <iframe class="width-100" height="300" id="map_canvas1" style="width: 100%;" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.393090780949!2d-2.2415156841565342!3d53.479305880007104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1c06cb789dd%3A0x9452ea3c625ff1a9!2sSt.James'sTower!5e0!3m2!1sen!2suk!4v1626247943715!5m2!1sen!2suk" data-dashlane-frameid="433"></iframe>
                             </div>
                             <!-- end map -->
                         </div>
@@ -804,12 +804,14 @@
         </script>
          -->
         <script>
+            
+            // Lazy Loading Images
             const lazyloadImages = document.querySelectorAll(".lazy");
 
-            var imageObserver = new IntersectionObserver(function(entries, observer) {
+            const imageObserver = new IntersectionObserver(function(entries, observer) {
                 entries.forEach(function(entry) {
                     if (entry.isIntersecting) {
-                    var image = entry.target;
+                    const image = entry.target;
                     image.src = image.dataset.src;
                     image.classList.remove("lazy");
                     imageObserver.unobserve(image);
@@ -821,6 +823,26 @@
                 imageObserver.observe(image);
             });
 
+            // Lazy Loading Iframes
+            const lazyloadIframes = document.querySelectorAll("iframe");
+
+            // console.log(lazyloadIframes)
+            // console.log(lazyloadImages)
+
+            const iframeObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                    const iframe = entry.target;
+                    iframe.src = iframe.dataset.src;
+                    iframe.classList.remove("lazy");
+                    iframeObserver.unobserve(iframe);
+                    }
+                });
+                });
+
+                lazyloadIframes.forEach(function(iframe) {
+                    iframeObserver.observe(iframe);
+            });
         </script>
     </body>
 </html>
