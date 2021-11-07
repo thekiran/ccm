@@ -22,10 +22,12 @@ function css( src ) {
 }
 
 
-css('css/bootstrap.min.css')
+css('css/bootstrap.min.css') 
 // css('css/font-awesome.min.css')
 css('css/elements.css')
 css('css/responsive.css')
 
-css('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700')
-css('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900')
+// css('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700')
+css('https://fonts.googleapis.com/css?family=Open+Sans')
+// css('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900')
+css('https://fonts.googleapis.com/css?family=Montserrat')
