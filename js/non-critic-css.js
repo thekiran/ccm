@@ -23,7 +23,7 @@ function css( src ) {
 
 
 css('css/bootstrap.min.css')
-css('css/font-awesome.min.css')
+// css('css/font-awesome.min.css')
 css('css/elements.css')
 css('css/responsive.css')
 

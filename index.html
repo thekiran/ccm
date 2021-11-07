@@ -849,69 +849,85 @@
          -->
         <script>
             
-            // Lazy Loading Images
-            const lazyloadImages = document.querySelectorAll(".lazy");
-
-            const imageObserver = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                    const image = entry.target;
-                    image.src = image.dataset.src;
-                    image.classList.remove("lazy");
-                    imageObserver.unobserve(image);
-                    }
-                });
-                });
-
-                lazyloadImages.forEach(function(image) {
-                imageObserver.observe(image);
-            });
-
-            // Lazy Loading Iframes
-            const lazyloadIframes = document.querySelectorAll("iframe");
-
-            // console.log(lazyloadIframes)
-            // console.log(lazyloadImages)
-
-            const iframeObserver = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                    const iframe = entry.target;
-                    iframe.src = iframe.dataset.src;
-                    iframe.classList.remove("lazy");
-                    iframeObserver.unobserve(iframe);
-                    }
-                });
-                });
-
-                lazyloadIframes.forEach(function(iframe) {
-                    iframeObserver.observe(iframe);
-            });
 
             $LAB.script("js/non-critic-css.js")
             document.addEventListener('DOMContentLoaded',()=>{
             })
+
             window.onload = function() {
 
                 $LAB
-                // .script("js/non-critic-css.js").wait()
-                .script("js/jquery.min.js").wait()
-                .script("js/jquery.appear.js").wait()
-                .script("js/smooth-scroll.js").wait()
-                .script("js/bootstrap.min.js").wait()
-                .script("js/wow.min.js").wait()
-                .script("js/owl.carousel.min.js").wait()        
-                .script("js/imagesloaded.pkgd.min.js").wait()
-                .script("js/jquery.isotope.min.js").wait() 
-                .script("js/jquery.magnific-popup.min.js").wait()
-                .script("js/jquery.nav.js").wait()
-                .script("js/equalize.min.js").wait()
-                .script("js/jquery.fitvids.js").wait()
-                .script("js/jquery.countTo.js").wait()
-                .script("js/counter.js").wait()
-                .script("js/twitterFetcher_min.js").wait()
-                .script("js/main.js").wait()
+                // .script("js/jquery.min.js").wait()
+                // .script("js/jquery.appear.js").wait()
+                // .script("js/smooth-scroll.js").wait()
+                // .script("js/bootstrap.min.js").wait()
+                // .script("js/wow.min.js").wait()
+                // .script("js/owl.carousel.min.js").wait()        
+                // .script("js/imagesloaded.pkgd.min.js").wait()
+                // .script("js/jquery.isotope.min.js").wait() 
+                // .script("js/jquery.magnific-popup.min.js").wait()
+                // .script("js/jquery.nav.js").wait()
+
+                // .script("bundles/js/first-tenlibs.js").wait()
+                // .script("bundles/js/sec-fivelibswithmain.js").wait()
+                .script("bundles/js/bundle.js").wait()
+
+                // .script("js/equalize.min.js").wait()
+                // .script("js/jquery.fitvids.js").wait()
+                // .script("js/jquery.countTo.js").wait()
+                // .script("js/counter.js").wait()
+                // .script("js/twitterFetcher_min.js").wait()
+                // .script("js/main.js").wait()
+
                 .script('https://www.googletagmanager.com/gtag/js?id=UA-209829546-1')
+
+                css('css/font-awesome.min.css')
+
+
+
+                // Lazy Loading Images
+                const lazyloadImages = document.querySelectorAll(".lazy");
+
+                const imageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                        const image = entry.target;
+                        image.src = image.dataset.src;
+                        image.classList.remove("lazy");
+                        imageObserver.unobserve(image);
+                        }
+                    });
+                    });
+
+                    lazyloadImages.forEach(function(image) {
+                    imageObserver.observe(image);
+                });
+
+    
+
+                // Lazy Loading Iframes
+                const lazyloadIframes = document.querySelectorAll("iframe");
+
+                // console.log(lazyloadIframes)
+                // console.log(lazyloadImages)
+
+                const iframeObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                        const iframe = entry.target;
+                        iframe.src = iframe.dataset.src;
+                        iframe.classList.remove("lazy");
+                        iframeObserver.unobserve(iframe);
+                        }
+                    });
+                    });
+
+                    lazyloadIframes.forEach(function(iframe) {
+                        iframeObserver.observe(iframe);
+                });
+
+
+
 
             }
     
