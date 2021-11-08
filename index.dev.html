@@ -31,14 +31,10 @@
         <!-- responsive -->
         <!-- <link rel="stylesheet" href="css/responsive.css" /> -->
 
-        <link rel="preload" as="style" href="bundles/css/bundle.css">
-        <link rel="preload" as="image" href="images/uploads/cleaning-company-manchester-op.jpg">
-        <link rel="preload" as="image" href="images/uploads/School-Cleaning-Manchester-Logo.webp">
-        <link rel="preload" as="script" href="bundles/js/bundle.js">
-
-
         <link rel="stylesheet" href="bundles/css/bundle.css">
 
+        <link rel="preload" as="image" href="images/uploads/School-Cleaning-Manchester-Logo.webp">
+        
         <!--[if IE 9]>
         <link rel="stylesheet" type="text/css" href="css/ie.css" />
         <![endif]-->
@@ -132,7 +128,7 @@
                 </nav> 
                 <!-- end nav -->
             </header><section class="position-relative cover-background tz-builder-bg-image border-none xs-padding-20px-tb hero-style2" id="school-cleaning-manchester" data-img-size="(W)1920px X (H)800px" style="padding-top: 0px; padding-bottom: 0px; background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
-            url('images/uploads/cleaning-company-manchester-op.jpg') !important;">
+            url('images/uploads/cleaning-company-manchester-op.webp') !important;">
 
                 <div class="container one-third-screen xs-height-auto position-relative">
                     <div class="row">
@@ -712,49 +708,6 @@
         <!-- javascript libraries -->
         <script defer src="bundles/js/bundle.js"></script>
 
-        <script>
-            window.onload = function() {
-
-                // Lazy Loading Images
-                const lazyloadImages = document.querySelectorAll(".lazy");
-
-                const imageObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                        const image = entry.target;
-                        image.src = image.dataset.src;
-                        image.classList.remove("lazy");
-                        imageObserver.unobserve(image);
-                        }
-                    });
-                    });
-
-                    lazyloadImages.forEach(function(image) {
-                    imageObserver.observe(image);
-                });
-
-
-                // Lazy Loading Iframes
-                const lazyloadIframes = document.querySelectorAll("iframe");
-
-
-                const iframeObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                        const iframe = entry.target;
-                        iframe.src = iframe.dataset.src;
-                        iframe.classList.remove("lazy");
-                        iframeObserver.unobserve(iframe);
-                        }
-                    });
-                    });
-
-                    lazyloadIframes.forEach(function(iframe) {
-                        iframeObserver.observe(iframe);
-                });
-    
-            }
-        </script>
     </body>
 </html>
         
